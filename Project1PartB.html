@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Project 1 Part B</title>
+<!--
+Part B – (25 Points) - Create a web page that will prompt the user to enter a Fahrenheit temperature, 
+that will be converted to Celsius using the formula (°F - 32) x 5/9 = °C.
+
+On separate lines, display the following in a paragraph on the web page.
+
+The original number in Fahrenheit with the degree symbol.
+
+The Celsius temperature with the degree symbol.
+-->
+<script>
+    function calculateY(){
+    // this function will calculate the y value
+    //window.alert("here");
+    var x = document.getElementById('userInput').value;
+    var y = 5 * x - 4;
+    var msg  = "With a <em>x</em> value of " + x;
+    msg += ",<br>you get a <em>y&deg;</em> value of " + y + ".";
+    var x = document.getElementById('outputPara').innerHTML = msg;
+    }
+</script>
+
+    </head> 
+
+
+<body>
+              <form>
+                  <div>
+                      please enter the x-cordinate: <input type="number" id="userInput">
+                      <br>
+                      <button type="button" onclick="calculateY();">Submit</button>
+                      <p id="outputPara">&nbsp;</p>
+                  </div>
+              </form>
+            </body>
+</html>
